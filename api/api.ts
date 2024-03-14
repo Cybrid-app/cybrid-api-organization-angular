@@ -1,3 +1,5 @@
 export * from './organizations.service';
 import { OrganizationsService } from './organizations.service';
-export const APIS = [OrganizationsService];
+export * from './subscriptions.service';
+import { SubscriptionsService } from './subscriptions.service';
+export const APIS = [OrganizationsService, SubscriptionsService];

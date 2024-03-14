@@ -11,22 +11,29 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
+export interface PostSubscriptionOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
-     */
-    guid: string;
-    /**
-     * Name provided for the organization.
+     * Name provided for the subscription.
      */
     name: string;
     /**
-     * ISO8601 datetime the record was created at.
+     * The type of subscription.
      */
-    created_at: string;
+    type: PostSubscriptionOrganizationModel.TypeEnum;
     /**
-     * ISO8601 datetime the record was last updated at.
+     * The url for the subscription.
      */
-    updated_at?: string;
+    url: string;
+    /**
+     * The environment that the subscription is configured for; one of sandbox or production.
+     */
+    environment: string;
 }
+export namespace PostSubscriptionOrganizationModel {
+    export type TypeEnum = 'webhook';
+    export const TypeEnum = {
+        Webhook: 'webhook' as TypeEnum
+    };
+}
+
 

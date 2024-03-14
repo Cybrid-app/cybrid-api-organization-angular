@@ -3,6 +3,7 @@ import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
 import { OrganizationsService } from './api/organizations.service';
+import { SubscriptionsService } from './api/subscriptions.service';
 
 @NgModule({
   imports:      [],

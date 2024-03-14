@@ -11,22 +11,49 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
+export interface SubscriptionOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
+     * Auto-generated unique identifier for the subscription.
      */
     guid: string;
     /**
-     * Name provided for the organization.
+     * Name provided for the subscription.
      */
     name: string;
     /**
+     * The type of subscription.
+     */
+    type: SubscriptionOrganizationModel.TypeEnum;
+    /**
+     * The url for the subscription.
+     */
+    url: string;
+    /**
+     * The environment that the subscription is configured for; one of sandbox or production.
+     */
+    environment: string;
+    /**
+     * The state of the subscription; one of storing, completed, failed, deleting, or deleted.
+     */
+    state: string;
+    /**
+     * The failure code of a subscription (if any)
+     */
+    failure_code?: string | null;
+    /**
      * ISO8601 datetime the record was created at.
      */
-    created_at: string;
+    created_at?: string;
     /**
      * ISO8601 datetime the record was last updated at.
      */
     updated_at?: string;
 }
+export namespace SubscriptionOrganizationModel {
+    export type TypeEnum = 'webhook';
+    export const TypeEnum = {
+        Webhook: 'webhook' as TypeEnum
+    };
+}
+
 

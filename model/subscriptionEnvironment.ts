@@ -11,22 +11,10 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
-    /**
-     * Auto-generated unique identifier for the organization.
-     */
-    guid: string;
-    /**
-     * Name provided for the organization.
-     */
-    name: string;
-    /**
-     * ISO8601 datetime the record was created at.
-     */
-    created_at: string;
-    /**
-     * ISO8601 datetime the record was last updated at.
-     */
-    updated_at?: string;
-}
+export type SubscriptionEnvironmentOrganizationModel = 'sandbox' | 'production';
+
+export const SubscriptionEnvironmentOrganizationModel = {
+    Sandbox: 'sandbox' as SubscriptionEnvironmentOrganizationModel,
+    Production: 'production' as SubscriptionEnvironmentOrganizationModel
+};
 

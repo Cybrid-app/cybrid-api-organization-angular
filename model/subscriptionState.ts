@@ -11,22 +11,13 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
-    /**
-     * Auto-generated unique identifier for the organization.
-     */
-    guid: string;
-    /**
-     * Name provided for the organization.
-     */
-    name: string;
-    /**
-     * ISO8601 datetime the record was created at.
-     */
-    created_at: string;
-    /**
-     * ISO8601 datetime the record was last updated at.
-     */
-    updated_at?: string;
-}
+export type SubscriptionStateOrganizationModel = 'storing' | 'completed' | 'failed' | 'deleting' | 'deleted';
+
+export const SubscriptionStateOrganizationModel = {
+    Storing: 'storing' as SubscriptionStateOrganizationModel,
+    Completed: 'completed' as SubscriptionStateOrganizationModel,
+    Failed: 'failed' as SubscriptionStateOrganizationModel,
+    Deleting: 'deleting' as SubscriptionStateOrganizationModel,
+    Deleted: 'deleted' as SubscriptionStateOrganizationModel
+};
 
