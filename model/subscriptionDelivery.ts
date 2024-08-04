@@ -11,22 +11,60 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
+export interface SubscriptionDeliveryOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
+     * Auto-generated unique identifier for the subscription delivery.
      */
     guid: string;
     /**
-     * Name provided for the organization.
+     * The response of the subscription delivery.
      */
-    name: string;
+    response?: string | null;
+    /**
+     * The subscription event guid of the subscription delivery.
+     */
+    subscription_event_guid: string;
+    /**
+     * The subscription guid of the subscription delivery.
+     */
+    subscription_guid: string;
+    /**
+     * The state of the subscription delivery.
+     */
+    state: SubscriptionDeliveryOrganizationModel.StateEnum;
+    /**
+     * ISO8601 datetime the next attempt will be made.
+     */
+    next_attempt_at?: string | null;
+    /**
+     * The number of attempts made to deliver the event.
+     */
+    attempt_count: string;
+    /**
+     * ISO8601 datetime the event was delivered.
+     */
+    completed_at?: string | null;
+    /**
+     * ISO8601 datetime the event delivery was marked as failed.
+     */
+    failed_at?: string | null;
     /**
      * ISO8601 datetime the record was created at.
      */
-    created_at: string;
+    created_at?: string;
     /**
      * ISO8601 datetime the record was last updated at.
      */
     updated_at?: string;
 }
+export namespace SubscriptionDeliveryOrganizationModel {
+    export type StateEnum = 'storing' | 'completed' | 'failing' | 'failed';
+    export const StateEnum = {
+        Storing: 'storing' as StateEnum,
+        Completed: 'completed' as StateEnum,
+        Failing: 'failing' as StateEnum,
+        Failed: 'failed' as StateEnum
+    };
+}
+
 

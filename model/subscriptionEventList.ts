@@ -9,24 +9,22 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { SubscriptionEventOrganizationModel } from './subscriptionEvent';
 
 
-export interface OrganizationOrganizationModel { 
+export interface SubscriptionEventListOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
+     * The total number of records available.
      */
-    guid: string;
+    total: string;
     /**
-     * Name provided for the organization.
+     * The page index to retrieve.
      */
-    name: string;
+    page: string;
     /**
-     * ISO8601 datetime the record was created at.
+     * The number of entities per page to return.
      */
-    created_at: string;
-    /**
-     * ISO8601 datetime the record was last updated at.
-     */
-    updated_at?: string;
+    per_page: string;
+    objects: Array<SubscriptionEventOrganizationModel>;
 }
 

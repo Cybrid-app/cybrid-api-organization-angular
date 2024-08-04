@@ -11,15 +11,27 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
+export interface SubscriptionEventOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
+     * Auto-generated unique identifier for the subscription event.
      */
     guid: string;
     /**
-     * Name provided for the organization.
+     * The type of the subscription event. One of transfer.created or transfer.updated.
      */
-    name: string;
+    event_type: string;
+    /**
+     * The object guid for which the event is received.
+     */
+    object_guid: string;
+    /**
+     * The environment that the subscription event is configured for; one of sandbox or production.
+     */
+    environment?: string;
+    /**
+     * The organization guid of the subscription event.
+     */
+    organization_guid: string;
     /**
      * ISO8601 datetime the record was created at.
      */

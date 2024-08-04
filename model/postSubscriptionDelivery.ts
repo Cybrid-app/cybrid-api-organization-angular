@@ -11,22 +11,14 @@
  */
 
 
-export interface OrganizationOrganizationModel { 
+export interface PostSubscriptionDeliveryOrganizationModel { 
     /**
-     * Auto-generated unique identifier for the organization.
+     * The event guid .
      */
-    guid: string;
+    subscription_event_guid: string;
     /**
-     * Name provided for the organization.
+     * The subscription guid.
      */
-    name: string;
-    /**
-     * ISO8601 datetime the record was created at.
-     */
-    created_at: string;
-    /**
-     * ISO8601 datetime the record was last updated at.
-     */
-    updated_at?: string;
+    subscription_guid: string;
 }
 
