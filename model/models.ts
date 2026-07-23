@@ -1,6 +1,7 @@
 export * from './errorResponse';
 export * from './organization';
 export * from './patchOrganization';
+export * from './patchSubscription';
 export * from './postSubscriptionDelivery';
 export * from './postSubscription';
 export * from './subscriptionDeliveryList';

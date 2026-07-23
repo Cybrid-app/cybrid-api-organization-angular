@@ -9,22 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { SubscriptionOrganizationModel } from './subscription';
 
 
-export interface SubscriptionListOrganizationModel { 
+/**
+ * Request body for subscription modification.
+ */
+export interface PatchSubscriptionOrganizationModel { 
     /**
-     * The total number of records available.
+     * Name for the subscription.
      */
-    total: string;
-    /**
-     * The page index to retrieve.
-     */
-    page: string;
-    /**
-     * The number of entities per page to return.
-     */
-    per_page: string;
-    objects: Array<SubscriptionOrganizationModel>;
+    name?: string | null;
 }
 
