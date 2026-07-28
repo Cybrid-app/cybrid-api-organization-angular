@@ -1,4 +1,5 @@
 export * from './errorResponse';
+export * from './organizationList';
 export * from './organization';
 export * from './patchOrganization';
 export * from './patchSubscription';

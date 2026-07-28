@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { SubscriptionOrganizationModel } from './subscription';
+import { OrganizationOrganizationModel } from './organization';
 
 
-export interface SubscriptionListOrganizationModel { 
+export interface OrganizationListOrganizationModel { 
     /**
      * The total number of records available.
      */
@@ -25,6 +25,6 @@ export interface SubscriptionListOrganizationModel {
      * The number of entities per page to return.
      */
     per_page: string;
-    objects: Array<SubscriptionOrganizationModel>;
+    objects: Array<OrganizationOrganizationModel>;
 }
 
